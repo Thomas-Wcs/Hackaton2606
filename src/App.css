@@ -1,0 +1,108 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  position: relative;
+  height: 100%;
+}
+
+.game-container h1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 50px;
+  border: red;
+}
+
+.game-area {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 80px); /* Ajustez la hauteur en fonction de vos besoins */
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.astronaut {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: bottom 0.3s;
+  font-size: 100px;
+}
+
+/*
+.astronaut {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: bottom 0.3s;
+  font-size: 100px;
+}
+*/
+
+.astronaut.jumping {
+  bottom: 100px;
+}
+
+.rocket-part {
+  position: absolute;
+  bottom: 0;
+  font-size: 45px;
+}
+
+.rocket-part.collected {
+  opacity: 0.3;
+}
+
+.extraterrestrial {
+  position: absolute;
+  bottom: 0;
+  transition: opacity 0.3s;
+  font-size: 50px;
+}
+
+.extraterrestrial.active {
+  opacity: 1;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.controls button {
+  margin: 0 10px;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.button-replay {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button-replay:hover {
+  background-color: #45a049;
+}
+
+.button-replay:focus {
+  outline: none;
+}
